@@ -1,4 +1,3 @@
-import pygame
 import numpy as np
 
 GREEN = (0, 234, 0)
@@ -34,7 +33,6 @@ class NN:
         a = []
         for para in self.para:
             a.append(para.shape)
-
         print(a)
 
     def predict(self, X):

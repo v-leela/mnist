@@ -118,17 +118,6 @@ class Window:
         self.grid.fill(0)
 
     def get_image(self):
-        """
-        Returns (784,1) image ready for the network
-        """
-
         x = self.grid.astype(np.float32) / 255.0
 
         return x.reshape(784, 1)
-
-    def show(self):
-        self.make_window()
-
-        self.draw()
-
-        self.draw_pixels()
