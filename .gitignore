@@ -52,7 +52,6 @@ datasets/
 *.zip
 *.tar
 *.gz
-*.npz
 *.npy
 *.pkl
 
