@@ -12,6 +12,8 @@ class Window:
         self.border_width = broder_width
         self.pixel_size = (sorted(self.screen_size)[0] - 2 * broder_width) // 28
         self.draw_height = 28 * self.pixel_size
+        self.light = 1.2
+        self.fade = 1.7
 
         # 28x28 image
         self.grid = np.zeros((28, 28), dtype=np.uint8)
@@ -93,8 +95,8 @@ class Window:
 
         # 3x3 brush
         BRIGHT = 255
-        LIGHT = 255 / 1.2
-        FADE = 255 / 2  # 255 / 3
+        LIGHT = 255 / self.light
+        FADE = 255 / self.fade
 
         for dr in (-1, 0, 1):
             for dc in (-1, 0, 1):
