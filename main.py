@@ -28,7 +28,9 @@ while running:
             running = False
 
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RETURN:
+            if (
+                event.key == pygame.K_RETURN
+            ):  # nn will predict the number with probability
                 if not done:
                     done = True
                     prediction, pred_prob = nn.predict(
@@ -37,6 +39,11 @@ while running:
                     for pred, prob in zip(prediction, pred_prob):
                         print(f"{pred} ---> {prob}")
                 else:
+                    done = False
+
+            if event.key == pygame.K_r:  # reload the window, new window
+                window.clear()
+                if done:
                     done = False
 
     screen.fill(BLACK)

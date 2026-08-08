@@ -6,14 +6,14 @@ WHITE = (255, 255, 255)
 
 
 class Window:
-    def __init__(self, screen, broder_width=7):
+    def __init__(self, screen, broder_width=7, light=1.1, fade=1.5):
         self.screen = screen
         self.screen_size = screen.get_size()
         self.border_width = broder_width
         self.pixel_size = (sorted(self.screen_size)[0] - 2 * broder_width) // 28
         self.draw_height = 28 * self.pixel_size
-        self.light = 1.2
-        self.fade = 1.7
+        self.light = light
+        self.fade = fade
 
         # 28x28 image
         self.grid = np.zeros((28, 28), dtype=np.uint8)
@@ -120,6 +120,5 @@ class Window:
         self.grid.fill(0)
 
     def get_image(self):
-        x = self.grid.astype(np.float32) / 255.0
-
+        x = self.grid.astype(np.float32) / 255
         return x.reshape(784, 1)
