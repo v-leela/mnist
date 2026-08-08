@@ -6,7 +6,7 @@ WHITE = (255, 255, 255)
 
 
 class Window:
-    def __init__(self, screen, broder_width=7, light=1.1, fade=1.5):
+    def __init__(self, screen, broder_width=7, light=1, fade=1):
         self.screen = screen
         self.screen_size = screen.get_size()
         self.border_width = broder_width

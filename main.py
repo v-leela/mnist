@@ -4,7 +4,7 @@ from window.draw_window import Window
 from window.NN import NN
 
 np.set_printoptions(suppress=True, precision=3)
-params = np.load("weights.npz")
+params = np.load("weights3.npz")
 BLACK = (0, 0, 0)
 GREEN = (0, 234, 0)
 
