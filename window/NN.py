@@ -30,10 +30,7 @@ class NN:
         return A3
 
     def shape(self):
-        a = []
-        for para in self.para:
-            a.append(para.shape)
-        print(a)
+        return [para.shape for para in self.para]
 
     def predict(self, X):
         y_pred = self.forwardprop(X)
