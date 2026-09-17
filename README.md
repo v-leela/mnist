@@ -31,14 +31,12 @@ To launch the interactive application : ```python main.py```
 
 ## Project Structure
 
-.
+MNIST/
 ├── notebook/
 │   └── neuralnetwork.ipynb
-│
 ├── window/
 │   ├── NN.py
 │   └── draw_window.py
-│
 ├── main.py
 ├── weights_nn.npz
 ├── README.md
