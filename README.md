@@ -31,6 +31,7 @@ To launch the interactive application : ```python main.py```
 
 ## Project Structure
 
+```
 MNIST/
 ├── notebook/
 │   └── neuralnetwork.ipynb
@@ -41,3 +42,4 @@ MNIST/
 ├── weights_nn.npz
 ├── README.md
 └── pyproject.toml
+```
